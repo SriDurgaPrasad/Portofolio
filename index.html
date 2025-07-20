@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goru Sri Durga Prasad - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showPage('home')">
+                <i class="fas fa-code"></i> GSDP
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('home')">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('profile')">
+                            <i class="fas fa-user"></i> Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('skills')">
+                            <i class="fas fa-cogs"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('certifications')">
+                            <i class="fas fa-certificate"></i> Certifications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('achievements')">
+                            <i class="fas fa-trophy"></i> Achievements
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('contact')">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="hero-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <h1 class="display-3 fw-bold mb-3">
+                                Hi, I'm <span class="text-gradient">Goru Sri Durga Prasad</span>
+                            </h1>
+                            <h3 class="mb-4 text-muted">Electronics & Communication Engineering</h3>
+                            <p class="lead mb-4">
+                                Fueling the future of technology by turning bold ideas into real-world digital experiences. With a sharp eye for creativity and a strong foundation in both software innovation and hardware systems, I thrive at the intersection of design, code, and circuitry. I’m deeply driven by curiosity and committed to continuous learning—always evolving with the tech landscape while building solutions that matter.
+                            </p>
+                            <div class="d-flex gap-3">
+                                <button class="btn btn-primary btn-lg" onclick="showPage('profile')">
+                                    <i class="fas fa-user me-2"></i>View Profile
+                                </button>
+                                <button class="btn btn-outline-light btn-lg" onclick="showPage('contact')">
+                                    <i class="fas fa-envelope me-2"></i>Contact Me
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <div class="floating-card">
+                                <i class="fas fa-microchip"></i>
+                                <span>VLSI Design</span>
+                            </div>
+                            <div class="floating-card">
+                                <i class="fas fa-code"></i>
+                                <span>Programming</span>
+                            </div>
+                            <div class="floating-card">
+                                <i class="fas fa-circuit-board"></i>
+                                <span>Hardware</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="profile" class="page">
+        <div class="container mt-5 pt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img id="profileImage" src="./Yaayprofile.jpg" alt="Profile" class="profile-image">
+                            <div class="upload-overlay">
+                                <i class="fas fa-camera"></i>
+                                <input type="file" id="profileUpload" accept="image/*" onchange="uploadProfileImage(event)">
+                            </div>
+                        </div>
+                        <h2 class="text-center mt-3">Goru Sri Durga Prasad</h2>
+                        <p class="text-center text-muted">Electronics & Communication Engineering</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sri-durga-prasad-594535258/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/SriDurgaPrasad" class="social-link"><i class="fab fa-github"></i></a>
+            
+                            <!-- <a href="" class="social-link"><i class="fas fa-envelope"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="profile-details">
+                        <div class="section-header">
+                            <h3><i class="fas fa-user-circle me-2"></i>About Me</h3>
+                        </div>
+                        <p class="lead">
+                            I am a dedicated Electronics & Communication Engineering student with a passion for 
+                            technology and innovation. My expertise spans across software development, hardware 
+                            programming, and VLSI design. I thrive on solving complex problems and learning 
+                            new technologies.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <div>
+                                        <strong>Branch</strong>
+                                        <p>Electronics & Communication Engineering</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <i class="fas fa-brain"></i>
+                                    <div>
+                                        <strong>Strengths</strong>
+                                        <p>Quick Learner and Problem Solver</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <i class="fas fa-keyboard"></i>
+                                    <div>
+                                        <strong>Typing Speed</strong>
+                                        <p>80 WPM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <i class="fas fa-fire"></i>
+                                    <div>
+                                        <strong>Coding Streak</strong>
+                                        <p>365 days</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Page -->
+    <div id="skills" class="page">
+        <div class="container mt-5 pt-5">
+            <div class="section-header text-center mb-5">
+                <h2><i class="fas fa-cogs me-3"></i>Skills & Technologies</h2>
+                <p class="lead">My technical expertise across various domains</p>
+            </div>
+            
+            <div class="row">
+                <!-- Programming Languages -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code me-2"></i>Programming Languages</h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>C</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>SQL</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Technologies -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-globe me-2"></i>Web Technologies</h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hardware Programming -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-microchip me-2"></i>Hardware Programming</h4>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Verilog</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>SystemVerilog</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="col-lg-6 mb-4">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-tools me-2"></i>Technologies & Tools</h4>
+                        <div class="tech-badges">
+                            <span class="tech-badge">VLSI</span>
+                            <span class="tech-badge">ServiceNow</span>
+                            <span class="tech-badge">CAD</span>
+                            <span class="tech-badge">github</span>
+                            <span class="tech-badge">Cadence</span>
+                            <span class="tech-badge">VScode</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certifications Page -->
+    <div id="certifications" class="page">
+        <div class="container mt-5 pt-5">
+            <div class="section-header text-center mb-5">
+                <h2><i class="fas fa-certificate me-3"></i>Certifications</h2>
+                <p class="lead">Professional certifications and completed courses</p>
+            </div>
+            
+            <div class="row" id="certificationsContainer">
+                <!-- Default Certifications -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-cuttlefish"></i>
+                        </div>
+                        <h5>C Programming</h5>
+                        <!-- <p>Comprehensive certification in C programming language</p> -->
+                        <span class="cert-badge">Certified</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h5>Java Programming</h5>
+                        <!-- <p>Object-oriented programming with Java</p> -->
+                        <span class="cert-badge">Certified</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h5>Python Programming</h5>
+                        <!-- <p>Advanced Python programming and applications</p> -->
+                        <span class="cert-badge">Certified</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h5>HTML & CSS</h5>
+                        <!-- <p>Web development fundamentals</p> -->
+                        <span class="cert-badge">Certified</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h5>CSA & CAD</h5>
+                        <!-- <p>ServiceNow Certifications</p> -->
+                        <span class="cert-badge">Certified</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="certification-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h5>Verilog HDL & SystemVerilog</h5>
+                        <!-- <p>Hardware description language certification</p> -->
+                        <span class="cert-badge">Certified</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upload New Certification
+            <div class="text-center mt-5">
+                <div class="upload-certification">
+                    <h4><i class="fas fa-plus-circle me-2"></i>Add New Certification</h4>
+                    <div class="upload-form">
+                        <input type="text" id="certName" placeholder="Certification Name" class="form-control mb-2">
+                        <input type="text" id="certDescription" placeholder="Description" class="form-control mb-2">
+                        <input type="file" id="certUpload" accept="image/*,.pdf" class="form-control mb-2">
+                        <button class="btn btn-primary" onclick="addCertification()">
+                            <i class="fas fa-upload me-2"></i>Add Certification
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Achievements Page -->
+    <div id="achievements" class="page">
+        <div class="container mt-5 pt-5">
+            <div class="section-header text-center mb-5">
+                <h2><i class="fas fa-trophy me-3"></i>Achievements</h2>
+                <p class="lead">Notable accomplishments and milestones</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>365 Day Coding Streak</h4>
+                            <p>Maintained a consistent coding practice for an entire year, demonstrating dedication and commitment to continuous learning.</p>
+                            <span class="achievement-date">2024</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>80 WPM Typing Speed</h4>
+                            <p>Achieved exceptional typing speed of 80 words per minute, enhancing productivity and efficiency in coding and documentation.</p>
+                            <span class="achievement-date">2024</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Multiple Programming Certifications</h4>
+                            <p>Successfully completed certifications in C, Java, Python, HTML & CSS, CSA & CAD showcasing versatility in programming languages.</p>
+                            <span class="achievement-date">2022-2024</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Hardware Programming Expertise</h4>
+                            <p>Verilog and SystemVerilog for VLSI design, bridging the gap between software and hardware domains.</p>
+                            <span class="achievement-date">2024-2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="container mt-5 pt-5">
+            <div class="section-header text-center mb-5">
+                <h2><i class="fas fa-envelope me-3"></i>Contact Me</h2>
+                <p class="lead">Let's connect and discuss opportunities</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-4 text-center">
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <h5>Email</h5>
+                        <p>gsdprasad2005@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <h5>Phone</h5>
+                        <p>+91 7036838379</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Location</h5>
+                        <p>Kakinada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
